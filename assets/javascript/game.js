@@ -1,27 +1,37 @@
 //PSEUDOCODE
 
-//Declare variables
-
+//Declare alphabet array variable
 var alphabet = [ 'a', 'b', 'c', 'd', 'e',
-                   'f', 'g', 'h', 'i', 'j',
-                   'k', 'l', 'm', 'n', 'o',
-                   'p', 'q', 'r', 's', 't',
-                   'u', 'v', 'w', 'x', 'y',
-                   'z' ];
-// var wins = ;
-// var losses = ;
-// var guesses = ;
-var getRandomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
-console.log(getRandomLetter);
+                'f', 'g', 'h', 'i', 'j',
+                    'k', 'l', 'm', 'n', 'o',
+                    'p', 'q', 'r', 's', 't',
+                    'u', 'v', 'w', 'x', 'y',
+                    'z' ];
 
-document.onkeyup = function(event){
+//Pull random letter from array and store it in a varaible.
+ var getRandomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+ console.log(getRandomLetter);
 
-  if (event.key === getRandomLetter) {
-    document.getElementById('winSlot').innerHTML = (wins =  + 1);
-  } else if (event.key !== getRandomLetter) {
-    document.getElementById('guessesLeft').innerHTML = (guesses =  - 1);
-  }
+console.log("Press any key to play!");
+
+//Declare starting values for wins, guesses & losses
+var guesses = 1
+var wins = 0
+var losses = 0
+
+//Call function onkeyup
+ document.onkeyup = function(event){
+
+   if (event.key !== getRandomLetter && guesses > 0) {
+     document.getElementById('guessesLeft').innerHTML -= guesses;
+
+   } else if(event.key === getRandomLetter) {
+     document.getElementById('winSlot').innerHTML = (++wins);
+
+ }    else if (document.getElementById("guessesLeft").innerHTML === -10)
+    document.getElementById("lossSlot").innerHTML = (++losses);
 }
 
-var guesses = 10
-var wins = 0
+
+// (guesses - 1)
+// document.getElementById('guessesLeft').innerHTML =
