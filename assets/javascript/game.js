@@ -25,7 +25,7 @@ var recordKeys = []
 
 //Call function onkeyup
 
-document.onkeyup = function(event) {
+document.onkeyup = function playGame (event) {
 
    var keyed = event.key;
    recordKeys.push(keyed);
