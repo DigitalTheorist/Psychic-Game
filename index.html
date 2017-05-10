@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -43,19 +44,20 @@
 
 <div class="main">
 
-  <h2>Guess what letter I'm thinking of?</h2>
+  <h2 class="gameIntro">Prove your psychic abilties by guessing the letter!
+    The Play button starts and restarts. The Refresh button clears the board.</h2>
     <div class="game">
 
     <hr class="linebreak">
 
     <div class="wins">
-      <h3>Wins: <p id="winSlot"></p></h3>
+      <h3 class="gameSlots">Wins: <p id="winSlot"></p></h3>
       </div>
 
       <hr class="linebreak">
 
         <div class="losses">
-          <h3>Losses: <p id="lossSlot"></p></h3>
+          <h3 class="gameSlots">Losses: <p id="lossSlot"></p></h3>
         </div>
 
 
@@ -63,13 +65,13 @@
 <hr class="linebreak">
 
     <div class="guesses">
-      <h3 >Guesses left:<p id="guessesSlot"></p></h3>
+      <h3 class="gameSlots">Guesses left:<p id="guessesSlot"></p></h3>
         </div>
 
 <hr class="linebreak">
 
         <div class="guessRecord">
-          <h3>Your guesses so far: <p id="recordGuesses"></p></h3>
+          <h3 class="gameSlots">Your guesses so far: <p id="recordGuesses"></p></h3>
       </div>
 
     </div>
